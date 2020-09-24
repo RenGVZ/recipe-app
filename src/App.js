@@ -29,6 +29,7 @@ const App = () => {
   const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
+    setSearch('');
   }
   
   return (
@@ -42,6 +43,7 @@ const App = () => {
           type="text"
           value={search}
           onChange={updateSearch}
+          placeholder="Please type the name of a food or ingredient (For example: Pasta)"
           />
         <button 
           className="search-button" 
@@ -50,14 +52,18 @@ const App = () => {
           Click 
         </button>
       </form>
-      {recipes.map(recipe => (
-        <Recipe 
-          title={recipe.recipe.label} 
-          calories={recipe.recipe.calories} 
-          img={recipe.recipe.image}
-          key={recipe.recipe.label}
-          />
-      ))}
+      <div className="recipes">
+        {recipes.map(recipe => (
+          <Recipe 
+            recipe={recipe}
+            title={recipe.recipe.label}
+            ingredients={recipe.recipe.ingredients}
+            calories={recipe.recipe.calories} 
+            img={recipe.recipe.image}
+            key={recipe.recipe.label}
+            />
+        ))}
+      </div>
     </div>
   );
 }
