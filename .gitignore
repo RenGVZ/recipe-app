@@ -24,3 +24,5 @@ yarn-error.log*
 
 # API Keys
 key.js
+# Local Netlify folder
+.netlify
