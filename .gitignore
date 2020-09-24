@@ -1,8 +1,5 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# API Keys
-key.js
-
 # dependencies
 /node_modules
 /.pnp
@@ -24,3 +21,6 @@ key.js
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# API Keys
+key.js
